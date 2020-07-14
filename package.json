@@ -1,7 +1,7 @@
 {
   "name": "space-x-explorer",
   "version": "1.0.0",
-  "homepage": "https://sagasu.github.io/space-x-project",
+  "homepage": "https://sagasu.github.io/space-x-explorer",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
