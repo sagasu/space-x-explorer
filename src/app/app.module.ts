@@ -8,19 +8,25 @@ import { MatCardModule } from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LaunchListComponent } from './components/launch-list/launch-list.component';
+import { LaunchDetailsComponent } from './components/launch-details/launch-details.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, LaunchListComponent, LaunchDetailsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule,
-    GraphQLModule,
+    
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    
+    GraphQLModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
