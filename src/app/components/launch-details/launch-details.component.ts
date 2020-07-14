@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 import { LaunchDetailsGQL } from '../../services/spacexGraphql.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'launch-details',
@@ -20,7 +21,8 @@ import { LaunchDetailsGQL } from '../../services/spacexGraphql.service';
 export class LaunchDetailsComponent {
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly launchDetailsService: LaunchDetailsGQL
+    private readonly launchDetailsService: LaunchDetailsGQL,
+    private _location: Location
   ) {}
 
   launchDetails$ = this.route.paramMap.pipe(
@@ -28,4 +30,8 @@ export class LaunchDetailsComponent {
     switchMap((id) => this.launchDetailsService.fetch({ id })),
     map((res) => res.data.launch)
   );
+
+  backClicked() {
+    this._location.back();
+  }
 }

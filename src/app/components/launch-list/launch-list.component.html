@@ -6,7 +6,7 @@
           [routerLink]="['/', launch.id]"
         >
           <mat-card-header>
-            <img
+            <img *ngIf="launch.links.mission_patch_small != null"
               height="50"
               width="50"
               mat-card-avatar
