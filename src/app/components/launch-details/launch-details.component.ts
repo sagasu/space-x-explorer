@@ -6,7 +6,15 @@ import { LaunchDetailsGQL } from '../../services/spacexGraphql.service';
 @Component({
   selector: 'launch-details',
   templateUrl: './launch-details.component.html',
-  styles: [''],
+  styles: [`
+  .photo-grid {
+    padding-top: 30px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+  }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LaunchDetailsComponent {

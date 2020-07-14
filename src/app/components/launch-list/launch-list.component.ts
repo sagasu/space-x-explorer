@@ -5,7 +5,19 @@ import { PastLaunchesListGQL } from '../../services/spacexGraphql.service';
 @Component({
   selector: 'launch-list',
   templateUrl: './launch-list.component.html',
-  styles: [''],
+  styles: [`
+  .container {
+    padding-top: 20px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, 350px);
+    justify-content: center;
+  }
+  
+  .mat-card {
+    cursor: pointer;
+  }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LaunchListComponent {
