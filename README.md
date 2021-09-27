@@ -16,4 +16,4 @@ Procedure to deploy:
 `npm run build`  
 `npm run deploy`  
 
-Check in GitHub if [action was triggered](https://github.com/sagasu/space-x-explorer/deployments/activity_log?environment=github-pages) - it may take some time < 1 min but often > 30s :)  
+Check in GitHub if [action was triggered](https://github.com/sagasu/space-x-explorer/deployments/activity_log?environment=github-pages) - it may take some time < 30 min but often > 2min :)  
